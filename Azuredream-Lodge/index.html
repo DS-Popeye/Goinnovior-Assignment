@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZUREDREAM-LODGE</title>
+
+    <!-- FlowBite Theme CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icon CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <!-- Tailwind CSS and Bootstrap Icons are already included -->
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="md:relative w-full z-20 top-0 start-0 shadow-lg dark:border-gray-600 bg-white">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse hover:bg-orange-100 rounded-lg">
+                <svg width="181" height="91" viewBox="0 0 181 91" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="181" height="91" fill="url(#pattern0_329_305)" />
+                    <defs>
+                        <pattern id="pattern0_329_305" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_329_305"
+                                transform="matrix(0.00140091 0 0 0.00279028 -0.172825 -0.763624)" />
+                        </pattern>
+                        <image class="" id="image0_329_305" width="938" height="938"
+                            xlink:href="data:image/png;base64,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YFglPfpWJP/YIZi9hbTEaRvSrFU7zwG/otgTO7I3t0mi+8xg9knSntnWm+DFgWnBbLOxrjE4QLNJr9PTwKOkbJl3AtcB14+DUj17ALeRkni1Oj2YrRndHx1yn0oVA1S5Wr0DW2oe3Z8OZtMoX1myXjDbILoPq5Zxpybq561jxXfO+cD5wWx90uz3B+nsu/cF4HrgMuDHgyhF1INZpO+Zp0j7dO8i7Xe/Krr/ddAXL64xNZgdQRrA3hrYhJRvoZ0nSM/nz0h5LZo02CrSSJNiVFFEmimYLUNKQPEmYElSlsSXSLNwD5ECnul1lP0REZEkmL2ONOCxCvAaUjbaWaQAcAZpdvKPXe4JnpSKrUGrkJ7PpUnP50KkagAzSatt7irL1Cwi1RSoioiIiIiISKMoUBUREREREZFGUaAqIiIiIiIijaJAVURERERERBpFgaqIiIiIiIg0igJVERERERERaRQFqiIiIiIiItIoClRFRERERESkURSoioiIiIiISKMoUBUREREREZFGUaAqIiIiIiIijaJAVURERERERBpFgaqIiIiIiIg0igJVERERERERaRQFqiIiIiIiItIoClRFRERERESkURSoioiIiIiISKMoUBUREREREZFGUaAqIiIiIiIijaJAVURERERERBpFgaqIiIiIiIg0igJVERERERERaRQFqiIiIiIiItIoClRFRERERESkURSoioiIiIiISKMoUBUREREREZFGUaAqIiIiIiIijaJAVURERERERBpFgaqIiIiIiIg0igJVERERERERaRQFqiIiIiIiItIoClRFRERERESkURSoioiIiIiISKMoUBUREREREZFGUaAqIiIiIiIijaJAVURERERERBpFgaqIiIiIiIg0igJVERERERERaRQFqiIiIiIiItIoClRFRERERESkURSoioiIiIiISKP8PwAAAP//7NexAAAAAMAgf+tp7CiLRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWAgAA///s17EAAAAAwCB/62nsKItEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFYCAAD//+zXsQAAAADAIH/raewoi0QVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVgIAAP//7NexAAAAAMAgf+tp7CiLRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWAgAA///t17EAAAAAwCB/62nsKItEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgBVRBQAAYEVUAQAAWBFVAAAAVkQVAACAFVEFAABgRVQBAABYEVUAAABWRBUAAIAVUQUAAGBFVAEAAFgRVQAAAFZEFQAAgJUAfBJp2XNfYDcAAAAASUVORK5CYII=" />
+                    </defs>
+                </svg>
+
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="#"
+                    class="text-center py-2 px-3 text-gray-900 rounded hover:text-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-orange-500 dark:hover:bg-gray-500 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-medium">Login/Signup</a>
+                <button type="button"
+                    class="text-white bg-[#CEAF83] hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-xl text-sm px-4 py-2 text-center dark:bg-[#CEAF83] hover:border-green-400 dark:focus:ring-green-400 ">Reservation</button>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:border-gray-700">
+                    <li>
+                        <a href="#" class="block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-orange-600"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0 md:dark:hover:text-orange-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0 md:dark:hover:text-orange-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Rooms</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0 md:dark:hover:text-orange-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0 md:dark:hover:text-orange-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+        class="container gap-3 max-w-screen-xl flex items-center mx-auto px-2 lg:py-16 flex-col lg:flex-row justify-between shadow-lg md:shadow-none">
+        <div class="lg:max-w-[50%] px-6 pb-6">
+            <img class="ml-auto pr-10" src="./images/Frame.png" alt="">
+            <h1 class="text-5xl md:text-8xl font-[Playfair] mt-[-40px] bg-no-repeat bg-right"
+                style="background-image: url('./images/Vector.png'); background-position: right 115px;">
+                Find
+                the top Hotels nearby<span class="text-[#CEAF83]">.</span></h1>
+
+            <p>Looking for a comfortable and convenient place to call home? Our house rental offers spacious living
+                areas, modern amenities, and a prime location. Featuring multiple bedrooms, updated kitchens, and cozy
+                living spaces, it's perfect for families or professionals.</p>
+            <div class="flex justify-between lg:pr-24 py-10 font-[Urbanist] font-[16px]">
+                <p>Vila</p>
+                <p>Family House</p>
+                <p>Hotel</p>
+                <p>Room</p>
+            </div>
+            <div class="flex items-center gap-10 flex-col md:flex-row">
+                <a class="text-[#CEAF83] bg-[#EEE5D8] hover:bg-gray-300 hover:text-black font-medium rounded-2xl text-sm px-5 py-3 text-center"
+                    href="#">Discover now</a>
+                <a class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded-lg" href="#">
+                    <!-- Background Image -->
+                    <div
+                        class="w-14 h-14 rounded-full border bg-[url('./images/Ellipse2060.png')] bg-cover bg-center flex-shrink-0 flex justify-center items-center">
+                        <img class="w-4 h-5" src="./images/VectorFrame.png" alt="Icon">
+                    </div>
+                    <!-- Text -->
+                    <span>Watch Our Story</span>
+                </a>
+            </div><br>
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">Check Availability</h2>
+                <form action="#" method="POST"
+                    class="font-[Playfair] container bg-gray-50 shadow-lg lg:rounded-full p-4 lg:pl-10 flex mr-[-300px] relative z-10 lg:w-[1100px]">
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                        <!-- Check In Date -->
+                        <div class="md:col-span-1 px-4">
+                            <label class="text-black text-center ml-5 text-lg font-semibold">Check In</label>
+                            <input placeholder="Date" type="date" class="w-full p-1 border-0 border-gray-300 rounded-lg"
+                                required>
+                        </div>
+
+                        <!-- Check Out Date -->
+                        <div class="md:col-span-1 border-l-2 border-r-2 px-4 border-dashed">
+                            <label class="text-black text-center ml-5 text-lg font-semibold">Check Out</label>
+                            <input type="date" class="w-full p-1 border-0 border-gray-300 rounded-lg" required>
+                        </div>
+
+                        <!-- Adults -->
+                        <div class="md:col-span-1 px-4">
+                            <label class="text-black text-center ml-5 text-lg font-semibold">Adults</label>
+                            <select class="w-full p-1 border-0 border-gray-300 rounded-lg" required>
+                                <option>Add Adults</option>
+                                <option>1 Adult</option>
+                                <option>2 Adults</option>
+                            </select>
+                        </div>
+
+                        <!-- Children -->
+                        <div class="md:col-span-1 border-l-2 border-r-2 px-4 border-dashed">
+                            <label class="text-black text-center ml-5 text-lg font-semibold">Children</label>
+                            <select class="w-full p-1 border-0 border-gray-300 rounded-lg" required>
+                                <option>Add Children</option>
+                                <option>1 Child</option>
+                                <option>2 Children</option>
+                            </select>
+                        </div>
+
+                        <!-- Rooms -->
+                        <div class="md:col-span-1 px-4">
+                            <label class="text-black text-center ml-5 text-lg font-semibold">Room's</label>
+                            <select class="w-full p-1 border-0 rounded-lg" required>
+                                <option>Add Room's</option>
+                                <option>1 Room</option>
+                                <option>2 Rooms</option>
+                            </select>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="md:col-span-1 flex items-center">
+                            <button type="submit"
+                                class="lg:ml-auto lg:mx-0 mx-auto rounded-lg lg:rounded-full bg-[#CEAF83] text-white hover:bg-blue-600 transition px-6 py-2 lg:p-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div
+            class="border bg-[url('./images/c5c5362bf223af320ff59605f6f19b66.jpeg')] bg-cover bg-center w-full h-auto lg:w-[536px] lg:h-[736px] rounded-xl lg:max-w-[50%]">
+            <img class="w-28 h-28 rounded-full object-cover border-8 border-white lg:ml-[-55px] lg:mt-[-60px]"
+                src="./images/water-home.jpeg" height="" width="70" alt="">
+            <div class="h-[736px] flex items-center">
+                <img class="w-28 h-28 rounded-full object-cover border-8 border-white ml-auto lg:mr-[-60px] relative z-10"
+                    src="./images/ice-house.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Second section -->
+    <section class="bg-[url('./images/Rectangle.png')] bg-cover bg-center">
+        <section class="container gap-3 max-w-screen-xl md:mx-auto px-2 mt-14">
+            <!-- Middle text Section -->
+            <div class="flex flex-col md:flex-row justify-between gap-5">
+                <h1 class="flex-1 font-[Playfair] text-3xl font-bold lg:px-6">Discover Homeya's Finest Properties For
+                    Your
+                    Dream
+                    Home
+                </h1>
+                <p class="flex-1 font-[Urbanist] font-medium text-base">All three of Rooms Hotels locations are
+                    restorations
+                    that translate
+                    historic locations
+                    into places of
+                    contemporary comfort. Industrial architecture, salvaged building materials and the unique approach
+                </p>
+            </div><br><br>
+
+            <!-- Image Gallary section-->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4 px-2 mx-auto">
+                <!--First Galary Image taking 2 columns on large screens with fixed dimensions and no shrinking -->
+                <div class="relative lg:col-span-2 bg-cover bg-center flex-shrink-0 rounded-t-lg w-full md:w-full lg:w-[90%]"
+                    style="background-image: url('./images/Rectangle1.jpeg'); height: 458px;">
+
+                    <!-- Price in the top-right corner -->
+                    <p class="absolute top-6 right-6 bg-white text-[#CEAF83] px-3 py-2 rounded-xl">$62.00/Day</p>
+
+                    <!-- Room name and details in the bottom-left corner -->
+                    <a href="#"
+                        class="absolute bottom-24 left-8 text-white text-3xl font-bold hover:text-[#CEAF83] hover:underline">Deluxe
+                        Double Room &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+                    <div class="absolute bottom-10 left-9 text-white space-y-1 flex flex-row mt-5 items-center">
+                        <p class="pr-4">500 Sqft</p>
+                        <p class="border-l-2 border-r-2 px-5">3-4 guests</p>
+                        <p class="pl-4">Free Wi-Fi</p>
+                    </div>
+                </div>
+                <!-- Second Galary Image taking 1 columns -->
+                <div class="relative xl:col-span-1 bg-cover bg-center flex-shrink-0 w-full md:w-full lg:w-[120%] lg:ml-[-20%] rounded-t-lg"
+                    style="background-image: url('./images/Rectangle2.jpeg'); height: 458px;">
+
+                    <!-- Price in the top-right corner -->
+                    <p class="absolute top-6 right-6 bg-white text-[#CEAF83] px-3 py-2 rounded-xl">$62.00/Day</p>
+
+                    <!-- Room name and details in the bottom-left corner -->
+                    <a href="#"
+                        class="absolute bottom-24 left-8 text-white text-3xl font-bold hover:text-[#CEAF83] hover:underline">Deluxe
+                        Double Room &nbsp; &nbsp; </a>
+                    <div class="absolute bottom-10 left-9 text-white space-y-1 flex flex-row mt-5 items-center">
+                        <p class="pr-4">500 Sqft</p>
+                        <p class="border-l-2 border-r-2 px-5">3-4 guests</p>
+                        <p class="pl-4">Free Wi-Fi</p>
+                    </div>
+                </div>
+                <!-- Thirdth Galary Image taking 1 columns -->
+                <div class="relative bg-cover bg-center flex-shrink-0  rounded-t-lg"
+                    style="background-image: url('./images/Rectangle3.jpeg'); height: 458px;">
+
+                    <!-- Price in the top-right corner -->
+                    <p class="absolute top-6 right-6 bg-white text-[#CEAF83] px-3 py-2 rounded-xl">$62.00/Day</p>
+
+                    <!-- Room name and details in the bottom-left corner -->
+                    <a href="#"
+                        class="absolute bottom-24 left-8 text-white text-3xl font-bold hover:text-[#CEAF83] hover:underline">Hill
+                        View Suite &nbsp; &nbsp; &nbsp;</a>
+                    <div class="absolute bottom-10 left-9 text-white space-y-1 flex flex-row mt-5 items-center">
+                        <p class="pr-4">500 Sqft</p>
+                        <p class="border-l-2 border-r-2 px-5">3-4 guests</p>
+                        <p class="pl-4">Free Wi-Fi</p>
+                    </div>
+                </div>
+                <!-- Fourth Galary Image taking 1 columns -->
+                <div class="relative bg-cover bg-center flex-shrink-0  rounded-t-lg"
+                    style="background-image: url('./images/Rectangle4.png'); height: 458px;">
+
+                    <!-- Price in the top-right corner -->
+                    <p class="absolute top-6 right-6 bg-white text-[#CEAF83] px-3 py-2 rounded-xl">$62.00/Day</p>
+
+                    <!-- Room name and details in the bottom-left corner -->
+                    <a href="#"
+                        class="absolute bottom-24 left-8 text-white text-3xl font-bold hover:text-[#CEAF83] hover:underline">Hill
+                        View Suite &nbsp; &nbsp; &nbsp;</a>
+                    <div class="absolute bottom-10 left-9 text-white space-y-1 flex flex-row mt-5 items-center">
+                        <p class="pr-4">500 Sqft</p>
+                        <p class="border-l-2 border-r-2 px-5">3-4 guests</p>
+                        <p class="pl-4">Free Wi-Fi</p>
+                    </div>
+                </div>
+
+                <!-- Fifth Galary Image taking 1 columns -->
+                <div class="relative bg-cover bg-center flex-shrink-0  rounded-t-lg"
+                    style="background-image: url('./images/Rectangle5.jpeg'); height: 458px;">
+
+                    <!-- Price in the top-right corner -->
+                    <p class="absolute top-6 right-6 bg-white text-[#CEAF83] px-3 py-2 rounded-xl">$62.00/Day</p>
+
+                    <!-- Room name and details in the bottom-left corner -->
+                    <a href="#"
+                        class="absolute bottom-24 left-8 text-white text-3xl font-bold hover:text-[#CEAF83] hover:underline">Hill
+                        View Suite &nbsp; &nbsp; &nbsp;</a>
+                    <div class="absolute bottom-10 left-9 text-white space-y-1 flex flex-row mt-5 items-center">
+                        <p class="pr-4">500 Sqft</p>
+                        <p class="border-l-2 border-r-2 px-5">3-4 guests</p>
+                        <p class="pl-4">Free Wi-Fi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="items-center justify-center pt-12 pb-20 flex">
+                <a class="text-white bg-[#CEAF83] hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-xl text-sm px-4 py-2 text-center dark:bg-[#CEAF83] hover:border-green-400 dark:focus:ring-green-400 mx-auto"
+                    href="#">View All
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </section>
+
+
+
+
+    <!-- Review Section -->
+    <section class="main flex lg:flex-row flex-col-reverse">
+        <div class="w-full  bg-black lg:h-[471px] items-center justify-center lg:px-[140px] lg:py-[124px] py-10">
+            <h1 class="font-[Playfair] text-2xl lg:text-[48px] lg:leading-[56px] font-bold text-white text-center">Rave
+                Reviews
+                from Out
+                Satidfied
+                Guests</h1>
+
+            <!-- slider -->
+            <div class="flex flex-row text-black items-center justify-center pt-16">
+                <button class="bg-white focus:bg-[#CEAF83] px-3 py-2 rounded-full" id="prev">
+                    <i class="bi bi-arrow-left font-bold text-2xl"></i>
+                </button>
+                <a class="text-white m-2" href="#review1">
+                    <i class="bi bi-dot focus:text-[#CEAF83] font-black text-5xl"></i>
+                </a>
+                <a class="text-white m-2" href="#review2">
+                    <i class="bi bi-dot focus:text-[#CEAF83] font-bold text-5xl"></i>
+                </a>
+                <a class="text-white m-2" href="#review3">
+                    <i class="bi bi-dot focus:text-[#CEAF83] font-bold text-5xl"></i>
+                </a>
+                <button class="bg-white focus:bg-[#CEAF83] px-3 py-2 rounded-full" id="next">
+                    <i class="bi bi-arrow-right font-bold text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div
+            class="w-full bg-[#FFF9F6] lg:h-[471px] flex items-center justify-center font-[Urbanist] overflow-hidden relative">
+            <!-- Person one Review start -->
+            <div id="review1"
+                class="review-slide border-2 border-black rounded-lg m-10 p-9 w-[535px] transition-transform duration-500">
+                <div class="flex flex-row gap-3 mb-10">
+                    <img class="rounded-full" src="./images/review1.jpg" alt="" width="60">
+                    <div>
+                        <h1 class="font-bold text-lg">Arman</h1>
+                        <span class="font-normal text-lg">Webflow Developer</span>
+                    </div>
+                    <svg class="ml-auto h-9 w-6 mt-[-20px]" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.38419e-07 26.5213L5.9 0.42126H11.5L8.4 26.5213H2.38419e-07ZM15 26.3213L20.9 0.221262H26.5L23.4 26.3213H15Z"
+                            fill="#CEAF83" />
+                    </svg>
+
+                </div>
+                <p class="text-lg font-semibold mb-7">
+                    Amazing design, easy to customize and a design quality superlative account on its cloud platform for
+                    the optimized performance. And we didn't on our original designs.
+                </p>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                </div>
+            </div>
+
+
+
+            <!-- Person Two Review start -->
+            <div id="review2"
+                class="review-slide border-2 border-black rounded-lg m-10 p-9 w-[535px] transition-transform duration-500 hidden">
+                <div class="flex flex-row gap-3 mb-10">
+                    <img class="rounded-full" src="./images/review1.jpg" alt="" width="60">
+                    <div>
+                        <h1 class="font-bold text-lg">Shuvo</h1>
+                        <span class="font-normal text-lg">Webflow Developer</span>
+                    </div>
+                    <svg class="ml-auto h-9 w-6 mt-[-20px]" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.38419e-07 26.5213L5.9 0.42126H11.5L8.4 26.5213H2.38419e-07ZM15 26.3213L20.9 0.221262H26.5L23.4 26.3213H15Z"
+                            fill="#CEAF83" />
+                    </svg>
+
+                </div>
+                <p class="text-lg font-semibold mb-7">
+                    Amazing design, easy to customize and a design quality superlative account on its cloud platform for
+                    the optimized performance. And we didn't on our original designs.
+                </p>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                </div>
+            </div>
+
+
+
+            <!-- Person Three Review start -->
+            <div id="review3"
+                class="review-slide border-2 border-black rounded-lg m-10 p-9 w-[535px] transition-transform duration-500 hidden">
+                <div class="flex flex-row gap-3 mb-10">
+                    <img class="rounded-full" src="./images/review1.jpg" alt="" width="60">
+                    <div>
+                        <h1 class="font-bold text-lg">Rabiul</h1>
+                        <span class="font-normal text-lg">Webflow Developer</span>
+                    </div>
+                    <svg class="ml-auto h-9 w-6 mt-[-20px]" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.38419e-07 26.5213L5.9 0.42126H11.5L8.4 26.5213H2.38419e-07ZM15 26.3213L20.9 0.221262H26.5L23.4 26.3213H15Z"
+                            fill="#CEAF83" />
+                    </svg>
+
+                </div>
+                <p class="text-lg font-semibold mb-7">
+                    Amazing design, easy to customize and a design quality superlative account on its cloud platform for
+                    the optimized performance. And we didn't on our original designs.
+                </p>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 22 20">
+                        <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                </div>
+            </div>
+            <!-- Person Review End -->
+        </div>
+    </section>
+    <!-- Review Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="main bg-[url['./images/footer_background.png']] bg-cover bg-center font-[Urbanist]">
+        <div class="container max-w-screen-xl md:mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="flex flex-col py-14 items-center">
+                    <a class="hover:bg-orange-200 rounded-md p-1" href="index.html">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                    <p class="py-9 font-normal text-2xl">Follow us on social media</p>
+                    <div class="flex flex-row gap-5 justify-center">
+                        <a class="text-2xl text-[#CEAF96] hover:bg-orange-200 rounded-md p-1" href="#"><i
+                                class="bi bi-facebook"></i></a>
+                        <a class="text-2xl text-[#CEAF96] hover:bg-orange-200 rounded-md p-1" href="#"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a class="text-2xl text-[#CEAF96] hover:bg-orange-200 rounded-md p-1" href="#"><i
+                                class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="flex flex-col py-14 items-center lg:items-start">
+                    <h1 class="font-[Playfair] font-bold text-2xl">Quick Links</h1>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">About us</a>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">Our Service</a>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">Our Blog's</a>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">Contact</a>
+                </div>
+                <div class="flex flex-col py-14 items-center lg:items-start">
+                    <h1 class="font-[Playfair] font-bold text-2xl">Appointment</h1>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">Web Design and
+                        development</a>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">UI UX Service</a>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">Disital
+                        Marketing</a>
+                    <a class="font-normal text-base py-3 hover:bg-orange-200 rounded-md p-1" href="#">Custom Web
+                        Design</a>
+                </div>
+                <div class="flex flex-col py-14 px-3 lg:px-0">
+                    <h1 class="font-[Playfair] font-bold text-2xl">Contact Info</h1>
+                    <p class="font-normal text-lg py-3">
+                        <i class="bi bi-envelope pr-2"></i> Email <br>
+                        <span class="pl-7 text-sm">hunkcyAgencyUI@gamil.com</span>
+                    </p>
+                    <p class="font-normal text-lg py-3">
+                        <i class="bi bi-geo-alt pr-2"></i> Location <br>
+                        <span class="pl-7 text-sm">302/1, Hazi Tower, Gandaria New Rd, Dhaka 1204</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Reserve section -->
+        <div class="main flex bg-black w-full justify-between lg:px-80 px-3 py-1 lg:flex-row flex-col">
+            <p class="text-white font-[Urbanist] font-semibold text-lg">&copy; 2024 Bookky | All Rights Reserved.</p>
+            <div class="flex justify-around text-white gap-4 lg:flex-row flex-col">
+                <a class="font-[Urbanist] font-semibold text-lg" href="">Terms of service</a>
+                <a class="font-[Urbanist] font-semibold text-lg" href="">privacy policy</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript logic to handle the slider
+        const slides = document.querySelectorAll('.review-slide');
+        let currentIndex = 0;
+
+        // Function to show the current slide
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                } else {
+                    slide.classList.add('hidden');
+                }
+            });
+        }
+
+        // Next Button Event Listener
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        // Previous Button Event Listener
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        // Initial Slide
+        showSlide(currentIndex);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
