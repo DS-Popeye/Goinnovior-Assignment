@@ -1,13 +1,682 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renterio House Design</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind and daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Tailwind link -->
+    <script src="./tailwind.config.js"></script>
 </head>
 
-<body>
+<body class="font-manrope">
+
+
+    <!-- header section start -->
+
+    <header class="bg-header-bg lg:container mx-auto" id="home">
+        <!-- Navbar Start -->
+        <nav class="py-4 px-5 md:px-10 lg:px-0">
+            <div class="flex justify-between items-center">
+                <!-- Nav Logo -->
+                <div class="flex items-center">
+                    <a
+                        class="btn btn-ghost text-[1.75rem] md:text-[2rem] font-extrabold text-[#212121] ml-[-10px] hover:bg-inherit">
+                        <div class="btn btn-circle btn-sm bg-lime-300">
+                            <i class="fa-solid fa-arrow-right text-xl -rotate-45"></i>
+                        </div>
+                        Rinterio
+                    </a>
+                </div>
+
+                <!-- Nav Links for Large Screens Only -->
+                <div class="hidden xl:flex">
+                    <ul class="flex space-x-6">
+                        <li><a class="text-[#737373] text-[1rem] font-normal hover:text-black transition"
+                                href="#home">Home</a></li>
+                        <li><a class="text-[#737373] text-[1rem] font-normal hover:text-black transition"
+                                href="#about">Services</a></li>
+                        <li><a class="text-[#737373] text-[1rem] font-normal hover:text-black transition"
+                                href="#portfolio">Portfolio</a></li>
+                        <li><a class="text-[#737373] text-[1rem] font-normal hover:text-black transition"
+                                href="#news">Blogs</a></li>
+                        <li><a class="text-[#737373] text-[1rem] font-normal hover:text-black transition"
+                                href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Icons and Buttons with Responsive Visibility -->
+                <div class="flex items-center space-x-2">
+                    <!-- Search Icon (Visible on Medium Screens Only) -->
+                    <div class="hidden md:flex lg:flex">
+                        <button class="btn bg-white btn-circle" aria-label="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Cart Icon (Visible on Medium Screens Only) -->
+                    <div class="hidden md:flex lg:flex">
+                        <button class="btn bg-white btn-circle" aria-label="Cart">
+                            <div class="indicator">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Book Consult Button (Visible on Medium and Large Screens Only) -->
+                    <div class="hidden md:flex">
+                        <button class="bg-[#ABEF5F] px-[1.25rem] rounded-full py-[.63rem] flex items-center">
+                            Book Consult
+                            <div class="btn btn-circle btn-sm bg-black border-none hover:bg-black ml-2">
+                                <i class="fa-solid fa-arrow-right text-xl text-white -rotate-45"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Icon (Visible on Mobile and Medium Screens) -->
+                    <div class="dropdown sm:flex md:flex xl:hidden">
+                        <div tabindex="0" class="btn btn-circle bg-white border border-slate-200 rounded-full"
+                            aria-label="Menu">
+                            <svg class="text-[#737373]" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="currentcolor">
+                                <path d="M3.74207 6.75781H20.2421M3.74207 12.0078H20.2421M3.74207 17.2578H20.2421"
+                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-[#ABEF5F]   rounded-box z-[1] ml-[-10rem] mt-[14rem] w-52 p-2 shadow">
+                                <li><a class="text-[#737373] text-[1rem] font-normal" href="#home">Home</a></li>
+                                <li><a class="text-[#737373] text-[1rem] font-normal" href="#about">Services</a></li>
+                                <li><a class="text-[#737373] text-[1rem] font-normal" href="#portfolio">Portfolio</a>
+                                </li>
+                                <li><a class="text-[#737373] text-[1rem] font-normal" href="#news">Blogs</a></li>
+                                <li><a class="text-[#737373] text-[1rem] font-normal" href="#contact">Contact Us</a>
+                                </li>
+                                <li><a class="text-[#737373] text-[1rem] font-normal md:hidden" href="">Search</a></li>
+                                <li><a class="text-[#737373] text-[1rem] font-normal md:hidden" href="">Cart</a></li>
+                                <li><a class="text-[#737373] text-[1rem] font-normal md:hidden" href="#consult">Book
+                                        Consult</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- nav complete -->
+
+    <!-- hero section start -->
+    <section class="container mx-auto">
+        <div
+            class="flex flex-col justify-center items-center md:mt-[3rem] mt-[2rem] mb-[2.5rem] md:mb-[4.48rem] lg:mt-[2.5rem] lg:bb-[6.17rem] mx-auto">
+            <!-- hero image -->
+            <div class="">
+                <img class="" src="./assets/images/banner.png" alt="">
+            </div>
+            <!-- hero content -->
+            <div class="flex flex-col items-center">
+                <h1
+                    class="container mx-auto text-[1.75rem] md:text-[2.25rem]  lg:text-[4rem] text-center font-extrabold leading-[2rem] md:leading-normal">
+                    A barn house of this design has a striking appearance
+                </h1>
+                <p class="container mx-auto text-center mt-[0.99rem] lg:mt-[1.5rem]">
+                    The barn house captivates with its blend of rustic charm and modern sophistication, featuring
+                    weathered wood, sleek metal accents, and large windows that flood the space with natural light.
+                </p>
+
+                <button
+                    class=" btn btn-block bg-lime-300/50  md:w-fit mt-[1.32rem] md:mt-[1.32rem] lg:mt-8 text-[1.25rem] font-bold rounded-[2rem] px-6 h-[3.5rem] hover:bg-lime-300/50 hover:border-none">View
+                    Details
+                    <div class="btn btn-circle btn-sm bg-lime-300">
+                        <i class="fa-solid fa-arrow-right text-xl -rotate-45"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- hero section complete -->
+
+
+    <!-- header section end -->
+
+    <!-- main section start -->
+
+    <main>
+
+        <!-- Thoughtful section start -->
+        <section class="bg-[#F4F4F4]" id="about">
+            <div class="container mx-auto py-8 md:py-[4.5rem] lg:py-[6.25rem] px-[1.25rem] md:px-8 lg:px-0">
+                <!-- top image -->
+                <div class="absolute mt-[-68px] ml-[-50px] hidden lg:flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="44" viewBox="0 0 128 44" fill="none">
+                        <path
+                            d="M0.954082 13.6569C0.583461 14.0664 0.614946 14.6988 1.02441 15.0694C1.43387 15.44 2.06625 15.4085 2.43687 14.9991L0.954082 13.6569ZM34.2538 2.26427L33.9924 3.22952L34.2538 2.26427ZM54.4393 29.3016L53.5234 28.9003L54.4393 29.3016ZM42.0187 35.4429L42.3632 34.5042L42.0187 35.4429ZM36.6493 24.5034L37.6465 24.5776L36.6493 24.5034ZM70.2524 10.6232L70.5583 9.67113L70.2524 10.6232ZM87.8349 37.0452L88.7695 37.4009L87.8349 37.0452ZM78.6453 41.9457L78.8164 40.9604L78.6453 41.9457ZM72.6479 32.8623L73.6478 32.8455L72.6479 32.8623ZM110.16 18.8724L109.68 19.7498L110.16 18.8724ZM125.708 41.901L125.103 42.6973C125.394 42.918 125.781 42.963 126.115 42.8146C126.448 42.6663 126.674 42.3482 126.705 41.9847L125.708 41.901ZM119.013 35.5588C118.573 35.2247 117.946 35.3104 117.612 35.7501C117.278 36.1899 117.363 36.8172 117.803 37.1513L119.013 35.5588ZM127.51 32.3914C127.556 31.841 127.148 31.3574 126.597 31.3112C126.047 31.265 125.563 31.6737 125.517 32.2241L127.51 32.3914ZM125.825 39.3246C125.624 38.8103 125.044 38.5563 124.529 38.7575C124.015 38.9586 123.761 39.5386 123.962 40.053L125.825 39.3246ZM122.131 35.7778C122.364 36.2784 122.959 36.4951 123.46 36.2619C123.961 36.0286 124.177 35.4337 123.944 34.9331L122.131 35.7778ZM121.776 30.6634C121.508 30.1803 120.9 30.0056 120.417 30.2733C119.933 30.5409 119.759 31.1495 120.026 31.6326L121.776 30.6634ZM117.613 27.6835C117.923 28.1406 118.545 28.26 119.002 27.9501C119.459 27.6402 119.579 27.0184 119.269 26.5613L117.613 27.6835ZM116.316 22.7212C115.95 22.3074 115.318 22.2683 114.904 22.6341C114.49 22.9998 114.451 23.6318 114.817 24.0456L116.316 22.7212ZM111.533 20.9545C111.974 21.287 112.601 21.1991 112.934 20.7581C113.266 20.3172 113.178 19.6901 112.737 19.3576L111.533 20.9545ZM108.43 16.9563C107.918 16.7503 107.335 16.9988 107.129 17.5113C106.923 18.0237 107.172 18.6061 107.684 18.812L108.43 16.9563ZM103.395 17.5537C103.937 17.6625 104.464 17.3118 104.573 16.7704C104.682 16.2289 104.331 15.7017 103.789 15.5929L103.395 17.5537ZM99.0306 14.998C98.4791 14.9679 98.0077 15.3906 97.9776 15.942C97.9475 16.4935 98.3702 16.9649 98.9216 16.995L99.0306 14.998ZM94.3959 17.0402C94.9467 16.9998 95.3605 16.5206 95.3202 15.9698C95.2798 15.419 94.8005 15.0052 94.2497 15.0456L94.3959 17.0402ZM89.5137 15.6947C88.9725 15.8046 88.6228 16.3324 88.7327 16.8736C88.8426 17.4149 89.3704 17.7646 89.9117 17.6547L89.5137 15.6947ZM85.5626 18.8538C86.0829 18.6688 86.3548 18.097 86.1699 17.5766C85.9849 17.0562 85.4131 16.7843 84.8927 16.9693L85.5626 18.8538ZM80.4961 18.9583C80.0155 19.2303 79.8465 19.8405 80.1185 20.3211C80.3906 20.8018 81.0008 20.9708 81.4814 20.6987L80.4961 18.9583ZM77.8979 23.2811C78.3033 22.9061 78.328 22.2734 77.9531 21.868C77.5781 21.4625 76.9454 21.4378 76.5399 21.8128L77.8979 23.2811ZM73.448 25.6729C73.1767 26.1539 73.3467 26.7638 73.8277 27.0352C74.3087 27.3065 74.9187 27.1365 75.19 26.6555L73.448 25.6729ZM73.7913 30.6886C73.8754 30.1427 73.5011 29.6321 72.9552 29.5479C72.4094 29.4638 71.8987 29.8382 71.8146 30.384L73.7913 30.6886ZM71.9663 36.0275C72.075 36.5689 72.6021 36.9197 73.1436 36.811C73.6851 36.7022 74.0359 36.1751 73.9271 35.6337L71.9663 36.0275ZM76.4594 40.0348C76.0057 39.7199 75.3826 39.8325 75.0677 40.2862C74.7529 40.7399 74.8654 41.363 75.3191 41.6779L76.4594 40.0348ZM81.588 43.0707C82.1376 43.0166 82.5394 42.5272 82.4853 41.9776C82.4312 41.4279 81.9418 41.0262 81.3922 41.0803L81.588 43.0707ZM85.6555 38.8779C85.3037 39.3036 85.3635 39.934 85.7892 40.2858C86.2149 40.6376 86.8453 40.5778 87.1971 40.1521L85.6555 38.8779ZM89.4573 35.1525C89.5823 34.6145 89.2476 34.0771 88.7096 33.9521C88.1717 33.8271 87.6342 34.1619 87.5092 34.6998L89.4573 35.1525ZM87.8564 30.5849C87.8904 31.1361 88.3648 31.5554 88.9161 31.5214C89.4673 31.4873 89.8866 31.0129 89.8526 30.4617L87.8564 30.5849ZM88.9118 25.8637C88.7296 25.3424 88.1592 25.0675 87.6378 25.2497C87.1165 25.432 86.8416 26.0023 87.0238 26.5237L88.9118 25.8637ZM85.1785 22.7575C85.4749 23.2235 86.093 23.361 86.559 23.0646C87.025 22.7682 87.1625 22.1502 86.8661 21.6841L85.1785 22.7575ZM84.0259 18.0474C83.648 17.6447 83.0151 17.6246 82.6124 18.0026C82.2097 18.3805 82.1896 19.0134 82.5676 19.4161L84.0259 18.0474ZM79.4023 16.5471C79.8387 16.8855 80.4669 16.806 80.8053 16.3695C81.1436 15.933 81.0641 15.3048 80.6276 14.9665L79.4023 16.5471ZM76.823 12.431C76.3431 12.1576 75.7324 12.325 75.4591 12.8049C75.1857 13.2848 75.3531 13.8954 75.8329 14.1688L76.823 12.431ZM71.9656 12.3033C72.4783 12.5086 73.0603 12.2595 73.2657 11.7468C73.471 11.2341 73.2218 10.652 72.7091 10.4467L71.9656 12.3033ZM67.9853 8.95219C67.4482 8.82361 66.9086 9.15479 66.78 9.6919C66.6514 10.229 66.9826 10.7687 67.5197 10.8972L67.9853 8.95219ZM62.5384 10.0734C63.0882 10.1255 63.5761 9.72199 63.6282 9.17217C63.6803 8.62235 63.2768 8.13441 62.727 8.08232L62.5384 10.0734ZM57.3996 7.94655C56.8479 7.9711 56.4205 8.43829 56.4451 8.99002C56.4696 9.54176 56.9368 9.96913 57.4885 9.94457L57.3996 7.94655ZM52.4888 10.5432C53.0303 10.4346 53.3813 9.90761 53.2727 9.3661C53.1642 8.82459 52.6372 8.47361 52.0957 8.58217L52.4888 10.5432ZM46.9434 10.1088C46.4317 10.3167 46.1854 10.9 46.3932 11.4116C46.6011 11.9233 47.1844 12.1696 47.6961 11.9618L46.9434 10.1088ZM43.3775 14.3436C43.822 14.0157 43.9165 13.3896 43.5887 12.9452C43.2609 12.5007 42.6348 12.4062 42.1903 12.734L43.3775 14.3436ZM38.339 16.6566C38.0247 17.1108 38.1381 17.7337 38.5922 18.048C39.0464 18.3623 39.6693 18.2489 39.9836 17.7947L38.339 16.6566ZM38.0213 22.1769C38.1521 21.6404 37.8232 21.0993 37.2867 20.9685C36.7501 20.8376 36.2091 21.1665 36.0782 21.7031L38.0213 22.1769ZM35.6733 27.8978C35.7284 28.4474 36.2186 28.8482 36.7681 28.793C37.3176 28.7379 37.7184 28.2477 37.6633 27.6982L35.6733 27.8978ZM39.9214 33.0101C39.524 32.6265 38.8909 32.6378 38.5074 33.0352C38.1238 33.4326 38.1351 34.0656 38.5325 34.4492L39.9214 33.0101ZM43.7377 36.8745C44.2863 36.9378 44.7824 36.5443 44.8456 35.9957C44.9089 35.447 44.5154 34.951 43.9668 34.8877L43.7377 36.8745ZM47.2453 34.4983C46.7231 34.6782 46.4456 35.2473 46.6255 35.7695C46.8053 36.2916 47.3744 36.5692 47.8966 36.3893L47.2453 34.4983ZM51.476 34.4167C51.9124 34.0782 51.9917 33.45 51.6532 33.0136C51.3147 32.5772 50.6865 32.4979 50.2502 32.8364L51.476 34.4167ZM52.6762 30.3421C52.3529 30.7898 52.4537 31.4149 52.9014 31.7382C53.3491 32.0616 53.9742 31.9608 54.2976 31.513L52.6762 30.3421ZM56.1486 27.2841C56.2691 26.7451 55.9299 26.2105 55.391 26.0899C54.852 25.9694 54.3174 26.3085 54.1968 26.8475L56.1486 27.2841ZM54.3355 22.5284C54.415 23.075 54.9225 23.4536 55.4691 23.3741C56.0156 23.2946 56.3942 22.7871 56.3147 22.2405L54.3355 22.5284ZM54.8784 17.4757C54.6494 16.9731 54.0564 16.7513 53.5538 16.9802C53.0512 17.2092 52.8294 17.8022 53.0583 18.3048L54.8784 17.4757ZM50.7582 14.4464C51.087 14.8902 51.7132 14.9833 52.157 14.6545C52.6007 14.3258 52.6939 13.6995 52.3651 13.2557L50.7582 14.4464ZM49.139 9.60397C48.741 9.22099 48.108 9.2331 47.725 9.63103C47.342 10.029 47.3542 10.662 47.7521 11.045L49.139 9.60397ZM44.2407 8.13222C44.6899 8.45356 45.3145 8.34994 45.6359 7.90077C45.9572 7.45159 45.8536 6.82697 45.4044 6.50562L44.2407 8.13222ZM41.2784 3.96599C40.7892 3.70965 40.1849 3.89841 39.9285 4.3876C39.6722 4.87679 39.8609 5.48116 40.3501 5.73751L41.2784 3.96599ZM36.1677 3.9087C36.6884 4.09298 37.2598 3.82031 37.4441 3.29967C37.6284 2.77904 37.3557 2.20759 36.8351 2.02331L36.1677 3.9087ZM32.1981 0.78844C31.6537 0.695436 31.137 1.06137 31.0439 1.60577C30.9509 2.15016 31.3169 2.66688 31.8613 2.75988L32.1981 0.78844ZM27.5214 2.4356C28.0736 2.42539 28.5129 1.96947 28.5027 1.41728C28.4925 0.865091 28.0366 0.425732 27.4844 0.435947L27.5214 2.4356ZM22.7972 0.93555C22.2549 1.04009 21.9 1.56445 22.0046 2.10676C22.1091 2.64906 22.6335 3.00393 23.1758 2.8994L22.7972 0.93555ZM18.9349 4.05799C19.4558 3.8745 19.7294 3.30347 19.5459 2.78255C19.3624 2.26164 18.7914 1.98811 18.2705 2.17159L18.9349 4.05799ZM13.9733 4.00246C13.4792 4.24929 13.2788 4.8499 13.5257 5.34396C13.7725 5.83801 14.3731 6.03843 14.8672 5.7916L13.9733 4.00246ZM11.0096 7.98725C11.4749 7.68978 11.611 7.0714 11.3135 6.60608C11.016 6.14076 10.3976 6.00469 9.93231 6.30217L11.0096 7.98725ZM6.1429 8.98478C5.70722 9.32419 5.62919 9.95253 5.9686 10.3882C6.30802 10.8239 6.93636 10.9019 7.37203 10.5625L6.1429 8.98478ZM3.98479 13.4562C4.3874 13.0782 4.4073 12.4453 4.02924 12.0427C3.65118 11.6401 3.01833 11.6202 2.61572 11.9983L3.98479 13.4562ZM124.488 39.7182C124.048 39.3841 123.421 39.4698 123.087 39.9096C122.753 40.3493 122.838 40.9767 123.278 41.3108L124.488 39.7182ZM119.628 38.5378C120.068 38.8719 120.695 38.7863 121.029 38.3465C121.363 37.9067 121.278 37.2794 120.838 36.9453L119.628 38.5378ZM126.906 39.5863C126.952 39.036 126.544 38.5524 125.993 38.5062C125.443 38.46 124.959 38.8687 124.913 39.419L126.906 39.5863ZM125.316 34.6224C125.27 35.1727 125.678 35.6563 126.229 35.7025C126.779 35.7487 127.262 35.3401 127.309 34.7897L125.316 34.6224ZM125.708 41.901C126.657 41.5864 126.657 41.5864 126.657 41.5864C126.657 41.5863 126.657 41.5863 126.657 41.5862C126.657 41.5862 126.657 41.5861 126.657 41.586C126.657 41.5858 126.657 41.5855 126.657 41.5852C126.657 41.5846 126.657 41.5837 126.656 41.5827C126.655 41.5806 126.655 41.5777 126.653 41.574C126.651 41.5667 126.647 41.5561 126.643 41.5423C126.633 41.5148 126.62 41.4748 126.602 41.4227C126.566 41.3187 126.513 41.1667 126.443 40.9718C126.304 40.582 126.097 40.0199 125.825 39.3246L123.962 40.053C124.226 40.7286 124.427 41.2726 124.56 41.6461C124.627 41.8329 124.677 41.977 124.711 42.0735C124.727 42.1218 124.74 42.1581 124.748 42.182C124.752 42.194 124.755 42.2028 124.757 42.2084C124.757 42.2112 124.758 42.2132 124.759 42.2144C124.759 42.215 124.759 42.2154 124.759 42.2156C124.759 42.2157 124.759 42.2157 124.759 42.2157C124.759 42.2157 124.759 42.2157 124.759 42.2157C124.759 42.2157 124.759 42.2156 124.759 42.2156C124.759 42.2156 124.759 42.2156 125.708 41.901ZM123.944 34.9331C123.322 33.5982 122.597 32.1464 121.776 30.6634L120.026 31.6326C120.822 33.0684 121.525 34.4779 122.131 35.7778L123.944 34.9331ZM119.269 26.5613C118.363 25.2254 117.378 23.923 116.316 22.7212L114.817 24.0456C115.812 25.1718 116.746 26.4041 117.613 27.6835L119.269 26.5613ZM112.737 19.3576C112.064 18.8496 111.364 18.391 110.64 17.995L109.68 19.7498C110.31 20.0943 110.928 20.4984 111.533 20.9545L112.737 19.3576ZM110.64 17.995C109.938 17.6112 109.199 17.2653 108.43 16.9563L107.684 18.812C108.386 19.0939 109.053 19.4067 109.68 19.7498L110.64 17.995ZM103.789 15.5929C102.254 15.2843 100.656 15.0867 99.0306 14.998L98.9216 16.995C100.458 17.0789 101.961 17.2652 103.395 17.5537L103.789 15.5929ZM94.2497 15.0456C92.6592 15.1621 91.0702 15.3786 89.5137 15.6947L89.9117 17.6547C91.3832 17.3559 92.888 17.1507 94.3959 17.0402L94.2497 15.0456ZM84.8927 16.9693C83.347 17.5188 81.8685 18.1813 80.4961 18.9583L81.4814 20.6987C82.743 19.9845 84.1146 19.3685 85.5626 18.8538L84.8927 16.9693ZM76.5399 21.8128C75.309 22.9512 74.2577 24.2375 73.448 25.6729L75.19 26.6555C75.8863 25.4211 76.8014 24.2951 77.8979 23.2811L76.5399 21.8128ZM71.8146 30.384C71.6907 31.1884 71.6336 32.0204 71.6481 32.8791L73.6478 32.8455C73.6352 32.0974 73.685 31.3786 73.7913 30.6886L71.8146 30.384ZM71.6481 32.8791C71.6663 33.9607 71.7643 35.0217 71.9663 36.0275L73.9271 35.6337C73.7534 34.7689 73.6644 33.8313 73.6478 32.8455L71.6481 32.8791ZM75.3191 41.6779C76.2058 42.2932 77.2558 42.7193 78.4742 42.9309L78.8164 40.9604C77.8589 40.7942 77.0864 40.4699 76.4594 40.0348L75.3191 41.6779ZM78.4742 42.9309C79.568 43.1209 80.6091 43.167 81.588 43.0707L81.3922 41.0803C80.6129 41.157 79.7537 41.1232 78.8164 40.9604L78.4742 42.9309ZM87.1971 40.1521C87.8516 39.3602 88.376 38.4347 88.7695 37.4009L86.9003 36.6894C86.5758 37.5421 86.1559 38.2724 85.6555 38.8779L87.1971 40.1521ZM88.7695 37.4009C89.0551 36.6505 89.2835 35.9005 89.4573 35.1525L87.5092 34.6998C87.3562 35.3584 87.1543 36.0221 86.9003 36.6894L88.7695 37.4009ZM89.8526 30.4617C89.7552 28.8835 89.4295 27.3449 88.9118 25.8637L87.0238 26.5237C87.4852 27.8435 87.771 29.2018 87.8564 30.5849L89.8526 30.4617ZM86.8661 21.6841C86.0511 20.4027 85.0947 19.1861 84.0259 18.0474L82.5676 19.4161C83.5579 20.4712 84.4359 21.5897 85.1785 22.7575L86.8661 21.6841ZM80.6276 14.9665C79.431 14.0389 78.1552 13.19 76.823 12.431L75.8329 14.1688C77.0854 14.8823 78.2824 15.679 79.4023 16.5471L80.6276 14.9665ZM72.7091 10.4467C72.0002 10.1628 71.2824 9.90379 70.5583 9.67113L69.9465 11.5753C70.6256 11.7934 71.2995 12.0366 71.9656 12.3033L72.7091 10.4467ZM70.5583 9.67113C69.7167 9.40068 68.8573 9.16093 67.9853 8.95219L67.5197 10.8972C68.3439 11.0945 69.1544 11.3207 69.9465 11.5753L70.5583 9.67113ZM62.727 8.08232C60.9545 7.91441 59.1665 7.86791 57.3996 7.94655L57.4885 9.94457C59.1612 9.87012 60.8564 9.91407 62.5384 10.0734L62.727 8.08232ZM52.0957 8.58217C50.3024 8.94168 48.5696 9.44825 46.9434 10.1088L47.6961 11.9618C49.1947 11.353 50.8058 10.8805 52.4888 10.5432L52.0957 8.58217ZM42.1903 12.734C40.6946 13.8373 39.3872 15.1419 38.339 16.6566L39.9836 17.7947C40.8936 16.4797 42.0402 15.33 43.3775 14.3436L42.1903 12.734ZM36.0782 21.7031C35.8662 22.5724 35.7226 23.4812 35.652 24.4292L37.6465 24.5776C37.7091 23.736 37.8361 22.9362 38.0213 22.1769L36.0782 21.7031ZM35.652 24.4292C35.5769 25.4393 35.5473 26.6419 35.6733 27.8978L37.6633 27.6982C37.5525 26.5937 37.5769 25.5142 37.6465 24.5776L35.652 24.4292ZM38.5325 34.4492C39.3625 35.2502 40.3985 35.9135 41.6741 36.3817L42.3632 34.5042C41.3392 34.1284 40.544 33.6109 39.9214 33.0101L38.5325 34.4492ZM41.6741 36.3817C42.3653 36.6354 43.0553 36.7959 43.7377 36.8745L43.9668 34.8877C43.4406 34.827 42.9051 34.7031 42.3632 34.5042L41.6741 36.3817ZM47.8966 36.3893C49.2209 35.9332 50.4304 35.2277 51.476 34.4167L50.2502 32.8364C49.3462 33.5376 48.3277 34.1255 47.2453 34.4983L47.8966 36.3893ZM54.2976 31.513C54.7388 30.9021 55.0995 30.2867 55.3552 29.7029L53.5234 28.9003C53.3347 29.3309 53.0507 29.8235 52.6762 30.3421L54.2976 31.513ZM55.3552 29.7029C55.7028 28.9096 55.9657 28.1017 56.1486 27.2841L54.1968 26.8475C54.0419 27.5399 53.8191 28.2253 53.5234 28.9003L55.3552 29.7029ZM56.3147 22.2405C56.08 20.6274 55.5856 19.0283 54.8784 17.4757L53.0583 18.3048C53.6971 19.7071 54.1313 21.1246 54.3355 22.5284L56.3147 22.2405ZM52.3651 13.2557C51.4191 11.979 50.3347 10.7548 49.139 9.60397L47.7521 11.045C48.8732 12.124 49.8828 13.265 50.7582 14.4464L52.3651 13.2557ZM45.4044 6.50562C44.1012 5.5733 42.719 4.72085 41.2784 3.96599L40.3501 5.73751C41.7086 6.44938 43.0122 7.25336 44.2407 8.13222L45.4044 6.50562ZM36.8351 2.02331C36.0708 1.75279 35.2966 1.51059 34.5151 1.29901L33.9924 3.22952C34.7239 3.42755 35.4499 3.65461 36.1677 3.9087L36.8351 2.02331ZM34.5151 1.29901C33.7384 1.08873 32.9656 0.919573 32.1981 0.78844L31.8613 2.75988C32.5669 2.88044 33.2776 3.036 33.9924 3.22952L34.5151 1.29901ZM27.4844 0.435947C25.8796 0.465618 24.3134 0.643267 22.7972 0.93555L23.1758 2.8994C24.5886 2.62706 26.0403 2.46299 27.5214 2.4356L27.4844 0.435947ZM18.2705 2.17159C16.7648 2.70196 15.328 3.32566 13.9733 4.00246L14.8672 5.7916C16.156 5.14769 17.5162 4.55773 18.9349 4.05799L18.2705 2.17159ZM9.93231 6.30217C8.52633 7.20099 7.25563 8.11791 6.1429 8.98478L7.37203 10.5625C8.44231 9.72871 9.66234 8.84852 11.0096 7.98725L9.93231 6.30217ZM2.61572 11.9983C2.08477 12.4968 1.6731 12.9074 1.39241 13.1952C1.25204 13.3392 1.14437 13.4525 1.07084 13.5309C1.03408 13.5701 1.00584 13.6005 0.986324 13.6217C0.976564 13.6323 0.968982 13.6406 0.963601 13.6465C0.960911 13.6494 0.95877 13.6518 0.957182 13.6535C0.956389 13.6544 0.955734 13.6551 0.955216 13.6557C0.954958 13.656 0.954734 13.6562 0.954545 13.6564C0.954451 13.6565 0.954365 13.6566 0.954288 13.6567C0.954249 13.6568 0.954198 13.6568 0.954179 13.6568C0.954129 13.6569 0.954082 13.6569 1.69548 14.328C2.43687 14.9991 2.43683 14.9991 2.43679 14.9992C2.43678 14.9992 2.43674 14.9992 2.43672 14.9993C2.43667 14.9993 2.43664 14.9993 2.43662 14.9994C2.43656 14.9994 2.43655 14.9994 2.43656 14.9994C2.4366 14.9994 2.43677 14.9992 2.43708 14.9989C2.4377 14.9982 2.43886 14.9969 2.44057 14.995C2.44399 14.9913 2.44959 14.9852 2.45733 14.9768C2.47283 14.9599 2.49694 14.9339 2.52947 14.8992C2.59454 14.8299 2.69331 14.7259 2.8243 14.5915C3.08633 14.3228 3.47705 13.933 3.98479 13.4562L2.61572 11.9983ZM126.313 41.1047L124.488 39.7182L123.278 41.3108L125.103 42.6973L126.313 41.1047ZM120.838 36.9453L119.013 35.5588L117.803 37.1513L119.628 38.5378L120.838 36.9453ZM126.705 41.9847L126.906 39.5863L124.913 39.419L124.712 41.8173L126.705 41.9847ZM127.309 34.7897L127.51 32.3914L125.517 32.2241L125.316 34.6224L127.309 34.7897Z"
+                            fill="#212121" />
+                    </svg>
+                </div>
+                <div class="flex flex-col lg:flex-row justify-between gap-8">
+                    <div class="lg:w-1/2">
+                        <!-- card tittle -->
+                        <div
+                            class="flex flex-col  lg:items-start md:items-center  items-center space-y-5 md:space-y-5 ">
+                            <button
+                                class="btn bg-white rounded-[1.25rem] text-[1rem] font-bold text-[#494949] hover:bg-inherit"><i
+                                    class="fa-solid fa-arrow-right text-xl "></i>About Us</button>
+
+                            <h1
+                                class="w-[19rem] md:w-[48.125rem] lg:w-[35rem]  text-[#212121] text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-bold leading-normal text-center lg:text-start">
+                                We design thoughtful, liveable spaces</h1>
+
+                            <p
+                                class=" md:w-[40rem] lg:w-[35rem] text-center lg:text-start text-[#494949] text-[0.875rem] md:text-[1rem] font-medium leading-6">
+                                The barn house captivates with its blend of rustic charm and
+                                modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                        </div>
+                        <!-- card desc -->
+                        <div class="card_desc flex flex-col  md:flex md:flex-row lg:flex-col gap-6 mt-6">
+                            <!-- card desc 1 -->
+                            <div
+                                class="card_desc_1 bg-[#fff] p-5  md:w-[50%] lg:w-full rounded-2xl flex flex-row space-x-5 lg:space-x-6 ">
+                                <div class="card_1_images">
+                                    <img src="./assets/images/commercial.png" alt="">
+                                </div>
+                                <div class="card_1_desc">
+                                    <h3
+                                        class="text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] text-[#494949] font-extrabold">
+                                        Commercial</h3>
+                                    <p class="text-[#737373] text-[1rem] font-medium ">The barn house captivates with
+                                        its blend of rustic charm and modern. </p>
+                                </div>
+                            </div>
+                            <!-- card desc 2 -->
+                            <div
+                                class="card_desc_2 bg-[#fff] p-5  md:w-[50%] lg:w-full rounded-2xl flex flex-row space-x-5 lg:space-x-6">
+                                <div class="card_2_images">
+                                    <img src="./assets/images/residential.png" alt="">
+                                </div>
+                                <div>
+                                    <h3
+                                        class="text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] text-[#494949] font-extrabold">
+                                        Residential</h3>
+                                    <p class="text-[#737373] text-[1rem] font-medium ">The barn house captivates with
+                                        its blend of rustic charm and modern. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card image -->
+                    <div class="">
+                        <img class="w-fit" src="./assets/images/Rectangle.png" alt="Album" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Thoughtful section end -->
+
+        <!-- count section start -->
+
+        <section class="bg-[#F4F4F4]">
+            <div class="container mx-auto px-[1.25rem] md:px-8 lg:px-0">
+                <div class="bg-[#fff] flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap lg:gap-6 p-8 rounded-3xl">
+                    <!-- count 1 -->
+                    <div class=" div_1 p-5 md:w-1/2 flex flex-col items-center">
+                        <div>
+                            <img src="./assets/images/comment-01.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-center text-[#494949] text-[2rem] lg:text-[2.5rem] font-extrabold">235+</h3>
+                            <p class="center text-[#737373] text-[1rem] font-medium">Happy Client Review</p>
+                        </div>
+                    </div>
+
+
+                    <!-- count 2 -->
+                    <div class="div_2 p-5 md:w-1/2 flex flex-col items-center">
+                        <div>
+                            <img src="./assets/images/departement.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-center text-[#494949] text-[2rem] lg:text-[2.5rem] font-extrabold">50+</h3>
+                            <p class="center text-[#737373] text-[1rem] font-medium">Work Departments</p>
+                        </div>
+                    </div>
+                    <!-- count 3 -->
+                    <div class=" div_3 p-5 md:w-1/2 flex flex-col items-center">
+                        <div>
+                            <img src="./assets/images/user-multiple.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-center text-[#494949] text-[2rem] lg:text-[2.5rem] font-extrabold">30k+</h3>
+                            <p class="center text-[#737373] text-[1rem] font-medium">Our Happy Client</p>
+                        </div>
+                    </div>
+                    <!-- count 4 -->
+                    <div class=" div_4 p-5 md:w-1/2 flex flex-col items-center">
+                        <div>
+                            <img src="./assets/images/user-group.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-center text-[#494949]   text-[2rem] lg:text-[2.5rem] font-extrabold">307+
+                            </h3>
+                            <p class="center text-[#737373] text-[1rem] font-medium">Staff Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- count section end -->
+
+        <!-- Our Works section start -->
+
+        <section class="bg-[#F4F4F4]">
+            <div class="container mx-auto px-[1.25rem] md:px-8 lg:px-0 py-[2rem] md:py-[4.5rem] lg:py-[6.25rem]">
+                <div class="flex flex-col items-center space-y-6">
+                    <button class="btn bg-white rounded-[1.25rem] text-[1rem] font-bold text-[#494949]"><i
+                            class="fa-solid fa-arrow-right text-xl"></i>How we works</button>
+
+                    <h2 class="text-[#212121] text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-bold text-center">Our
+                        Works Process</h2>
+
+                    <p class="max-w-[42.39151rem] text-center text-[#494949] font-medium">The barn house captivates with
+                        its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal
+                        accents.</p>
+                </div>
+                <div class="card_items card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 lg:mt-8">
+                    <!-- card 1 -->
+                    <div class="bg-[#E7C1D3] card-body rounded-2xl flex flex-col items-start">
+                        <div>
+                            <img src="./assets/images/concept.png" alt="">
+                        </div>
+                        <h4 class="text-[#1C1C1C] text-[1.25rem] font-extrabold">Concept</h1>
+                            <p class="text-[#494949] text-[1rem] font-medium">The barn house captivates with its blend
+                                of rustic charm and modern.</p>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="bg-[#EFDA6E] card-body rounded-2xl">
+                        <div>
+                            <img src="./assets/images/flow-chart.png" alt="">
+                        </div>
+                        <h4 class="text-[#1C1C1C] text-[1.25rem] font-extrabold">Design Process</h1>
+                            <p class="text-[#494949] text-[1rem] font-medium">The barn house captivates with its blend
+                                of rustic charm and modern.</p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="bg-[#A4DAC3] card-body rounded-2xl">
+                        <div>
+                            <img src="./assets/images/vision.png" alt="">
+                        </div>
+                        <h4 class="text-[#1C1C1C] text-[1.25rem] font-extrabold">Supervision</h1>
+                            <p class="text-[#494949] text-[1rem] font-medium">The barn house captivates with its blend
+                                of rustic charm and modern.</p>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="bg-[#77AAEA] card-body rounded-2xl">
+                        <div>
+                            <img src="./assets/images/budget-planning.png" alt="">
+                        </div>
+                        <h4 class="text-[#1C1C1C] text-[1.25rem] font-extrabold">Budget Planning</h1>
+                            <p class="text-[#494949] text-[1rem] font-medium">The barn house captivates with its blend
+                                of rustic charm and modern.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Works section end -->
+
+        <!-- Our portfolio section start -->
+
+        <section class="" id="portfolio">
+            <div class="container mx-auto px-[1.25rem] md:px-8 lg:px-0 py-8 md:py-[4.5rem] lg:py-[6.25rem]">
+                <div class="flex flex-col items-center">
+                    <div class="hover:bg-[#ABEF5F33]">
+                        <button class="btn bg-[#ABEF5F33] rounded-[1.25rem] text-[1rem] font-bold text-[#494949]"><i
+                                class="fa-solid fa-arrow-right text-xl  "></i>Explore our Latest works</button>
+                    </div>
+                    <div>
+                        <h1
+                            class="text-[#212121] text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-bold text-center mt-4">
+                            Our Latest Portfolio
+
+                        </h1>
+                        <p
+                            class="text-center mt-4 md:mt-4 lg:mt-6 max-w-[40.91605rem] text-[#494949] text-[1rem] font-medium">
+                            The barn house captivates with its blend of rustic charm and modern sophistication,
+                            featuring weathered wood, sleek metal accents.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="mt-4 md:mt-6 lg:mt-8 grid lg:grid-cols-12 lg:grid-rows-1 md:grid-cols-8 md:grid-rows-1 gap-6">
+                    <!-- card 01 -->
+                    <div
+                        class="min-h-[14.20rem] md:col-span-8 lg:col-span-8 lg:row-span-1  bg-white flex flex-col md:flex-row items-start gap-6 rounded-2xl p-6 border border-solid border-[#E9E9E9] ">
+                        <div class=" w-full md:h-full">
+                            <img class="object-cover w-full h-full rounded-2xl" src="./assets/images/image_1.jfif"
+                                alt="card_1_img">
+                        </div>
+                        <div class="">
+                            <h4 class="text-[#494949] text-[1.25rem] md:text-[1.5rem] font-bold mb-4">Commercial</h4>
+                            <p class="text-[#494949] text-[.875rem] md:text-[1rem] mb-6">The barn house captivates with
+                                its blend of rustic charm and modern. The barn house captivates with its blend of rustic
+                                charm and modern .</p>
+                            <div class="">
+                                <a class=" text-[#212121] text-[1.25rem] font-bold " href="">View Details
+                                    <div class="btn btn-circle btn-sm bg-lime-300 ml-2">
+                                        <i class="fa-solid fa-arrow-right text-xl -rotate-45 "></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div
+                        class="min-h-[14rem]  md:col-span-4 lg:col-span-4 lg:row-span-1  p-6 rounded-[1rem]  bg-white border border-solid border-[#E9E9E9] ">
+                        <img class="w-full h-full object-cover rounded-[1rem]" src="./assets/images/image_2.jfif"
+                            alt="">
+                    </div>
+                    <!-- card 3 -->
+                    <div
+                        class="min-h-[14rem] md:col-span-4 lg:col-span-3 lg:row-span-1 p-6 rounded-[1rem]  bg-white border border-solid border-[#E9E9E9]">
+                        <img class="w-full h-full object-cover rounded-[1rem] flex lg:hidden"
+                            src="./assets/images/image_6.jfif" alt="">
+                        <img class="w-full h-full object-cover rounded-[1rem] hidden lg:flex "
+                            src="./assets/images/image_5.jfif" alt="">
+                    </div>
+                    <!-- card 4 -->
+                    <div
+                        class="min-h-[14rem]  md:col-span-8 lg:col-span-6 lg:row-span-1 p-6 rounded-[1rem]  bg-white flex flex-col md:flex-row items-start gap-6 border border-solid border-[#E9E9E9] ">
+                        <div class="md:max-w-[16.25rem] relative">
+                            <img class="h-full w-full object-cover rounded-[1rem]" src="./assets/images/image_4.jfif"
+                                alt="">
+                        </div>
+                        <div>
+                            <h4 class="text-[1.25rem] md:text-[1.5rem] text-[#494949] font-bold mb-4">Commercial</h4>
+                            <p class="text-[#737373] text-[1rem] font-medium mb-6">The barn house captivates with its
+                                blend of rustic charm and modern. </p>
+                            <a class=" text-[#212121] text-[1.25rem] font-bold " href="">View Details<div
+                                    class="btn btn-circle btn-sm bg-lime-300 ml-2">
+                                    <i class="fa-solid fa-arrow-right text-xl -rotate-45 "></i>
+                                </div></a>
+                        </div>
+
+                    </div>
+
+                    <!-- card 5 -->
+                    <div
+                        class="min-h-[14rem]  md:col-span-4  lg:col-span-3 lg:row-span-1  p-6 rounded-[1rem]  bg-white border border-solid border-[#E9E9E9] ">
+                        <img class="w-full h-full object-cover rounded-[1rem] hidden lg:flex"
+                            src="./assets/images/image_6.jfif" alt="">
+                        <img class="w-full h-full object-cover rounded-[1rem] flex lg:hidden "
+                            src="./assets/images/image_5.jfif" alt="">
+                    </div>
+                    <!-- card 6 -->
+                    <div
+                        class="min-h-[14rem] md:col-span-4 lg:hidden p-6 rounded-[1rem]  bg-white border border-solid border-[#E9E9E9] ">
+                        <img class="w-full h-full object-cover rounded-[1rem]" src="./assets/images/image_6.jfif"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our portfolio section end -->
+
+        <!-- article and news section -->
+        <section class="py-14 bg-[#F4F4F4]" id="news">
+            <div class="container mx-auto">
+                <!-- text content -->
+                <div class="flex justify-center">
+                    <div class="text-center space-y-5">
+                        <button class="btn bg-[#ABEF5F33] rounded-[1.25rem] text-[1rem] font-bold text-[#494949]"><i
+                                class="fa-solid fa-arrow-right mr-1"></i>Rinterio News</button>
+                        <h2 class="text-2xl md:text-[40px] font-bold">Read Our Articles and News</h2>
+                        <p class="text-sm md:text-[16px] font-medium w-2/3 mx-auto py-5">The barn house captivates with
+                            its
+                            blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal
+                            accents.
+                        </p>
+                    </div>
+                </div>
+                <!-- card content -->
+                <div class="grid gap-6 grid-cols-1 lg:grid-cols-3 p-6">
+                    <!-- card-1 -->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row lg:flex-col gap-3">
+                        <a href="#">
+                            <img class="rounded-t-lg w-full md:h-full lg:h-auto" src="assets/images/article1.png"
+                                alt="" />
+                        </a>
+                        <div class="">
+                            <div class="mt-5">
+                                <div class="flex gap-4 mb-3">
+                                    <small class="flex gap-2 items-center text-sm text-third font-medium">
+                                        <i class="fa-regular fa-calendar-check"></i>
+                                        <p>July14, 2024</p>
+                                    </small>
+                                    <small class="flex gap-2 items-center text-sm text-third font-medium">
+                                        <i class="fa-solid fa-image"></i>
+                                        <p>By Admin</p>
+                                    </small>
+                                </div>
+                                <h2 class="card-title text-xl font-extrabold mb-2">How to choose the
+                                    furniture
+                                    right of your home.</h2>
+                                <p class="text-[16px] font-medium">The barn house captivates with its
+                                    blend
+                                    of
+                                    rustic charm and modern. </p>
+                                <button
+                                    class="text-left text-xl md:text-lg font-extrabold rounded-full py-3 md:py-1">Read
+                                    modern
+                                    <div class="btn btn-circle btn-sm bg-lime-300 ml-2">
+                                        <i class="fa-solid fa-arrow-right text-xl -rotate-45 "></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-2 -->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row lg:flex-col gap-3">
+                        <a href="#">
+                            <img class="rounded-t-lg w-full md:h-full lg:h-auto" src="assets/images/article2.png"
+                                alt="" />
+                        </a>
+                        <div class="">
+                            <div class="mt-5">
+                                <div class="flex gap-4 mb-3">
+                                    <small class="flex gap-2 items-center text-sm text-third font-medium">
+                                        <i class="fa-regular fa-calendar-check"></i>
+                                        <p>July14, 2024</p>
+                                    </small>
+                                    <small class="flex gap-2 items-center text-sm text-third font-medium">
+                                        <i class="fa-solid fa-image"></i>
+                                        <p>By Admin</p>
+                                    </small>
+                                </div>
+                                <h2 class="card-title text-xl font-extrabold mb-2">How to choose the
+                                    furniture
+                                    right of your home.</h2>
+                                <p class="text-[16px] font-medium">The barn house captivates with its
+                                    blend
+                                    of
+                                    rustic charm and modern. </p>
+                                <button
+                                    class="text-left text-xl md:text-lg font-extrabold rounded-full py-3 md:py-1">Read
+                                    modern
+                                    <div class="btn btn-circle btn-sm bg-lime-300 ml-2">
+                                        <i class="fa-solid fa-arrow-right text-xl -rotate-45 "></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-3 -->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row lg:flex-col gap-3">
+                        <a href="#">
+                            <img class="rounded-t-lg w-full md:h-full lg:h-auto" src="assets/images/article3.png"
+                                alt="" />
+                        </a>
+                        <div class="">
+                            <div class="mt-5">
+                                <div class="flex gap-4 mb-3">
+                                    <small class="flex gap-2 items-center text-sm text-third font-medium">
+                                        <i class="fa-regular fa-calendar-check"></i>
+                                        <p>July14, 2024</p>
+                                    </small>
+                                    <small class="flex gap-2 items-center text-sm text-third font-medium">
+                                        <i class="fa-solid fa-image"></i>
+                                        <p>By Admin</p>
+                                    </small>
+                                </div>
+                                <h2 class="card-title text-xl font-extrabold mb-2">How to choose the
+                                    furniture
+                                    right of your home.</h2>
+                                <p class="text-[16px] font-medium">The barn house captivates with its
+                                    blend
+                                    of
+                                    rustic charm and modern. </p>
+                                <button
+                                    class="text-left text-xl md:text-lg font-extrabold rounded-full py-3 md:py-1">Read
+                                    modern
+                                    <div class="btn btn-circle btn-sm bg-lime-300 ml-2">
+                                        <i class="fa-solid fa-arrow-right text-xl -rotate-45 "></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Discuss section start -->
+
+        <section
+            class="bg-[url('./assets/images/bg.jpg')] bg-no-repeat bg-center bg-cover border-y-8 border-solid border-white divide-x-8"
+            id="contact">
+            <div class=" max-w-[1170px] mx-auto px-[1.25rem] md:px-8 lg:px-0 py-8 md:py-[4.5rem] lg:py-[6.25rem]">
+                <div class="flex flex-col items-center">
+                    <div>
+                        <button
+                            class="btn  bg-[#ABEF5F33] border-none rounded-[1.25rem] text-[1rem] font-bold text-[#494949]"><i
+                                class="fa-solid fa-arrow-right text-xl"></i>Let’s Connect</button>
+                    </div>
+                    <div>
+                        <h1
+                            class="text-[#212121] text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-bold text-center mt-4">
+                            Let’s Discuss Next Project
+
+                        </h1>
+                        <p
+                            class="text-center mt-4 md:mt-4 lg:mt-6 max-w-[40.91605rem] text-[#494949] text-[1rem] font-medium">
+                            The barn house captivates with its blend of rustic charm and modern sophistication,
+                            featuring weathered wood, sleek metal accents.
+                        </p>
+                    </div>
+                </div>
+                <div class="max-w-[60.625rem] mx-auto mt-8">
+                    <form action="" class="w-full flex flex-col gap-6 items-center">
+                        <div class="flex flex-col md:flex-row gap-y-5 gap-x-5 w-full ">
+                            <input class="py-[1.06rem] px-5 rounded-[4rem] w-full md:w-[29.4375rem]" type="text"
+                                name="text" placeholder="First Name*">
+                            <input class="py-[1.06rem] px-5 rounded-[4rem] w-full md:w-[29.4375rem]" type="text"
+                                name="text" placeholder="Last Name*">
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-y-5 gap-x-5 w-full ">
+                            <input class="py-[1.06rem] px-5 rounded-[4rem] w-full md:w-[29.4375rem]" type="tel"
+                                name="text" placeholder="Phone Number*">
+                            <input class="py-[1.06rem] px-5 rounded-[4rem] w-full md:w-[29.4375rem]" type="email"
+                                name="text" placeholder="Email Number*">
+                        </div>
+                        <!-- textarea -->
+                        <textarea name="" id="" placeholder="Write your message here"
+                            class="textarea w-full lg:[w-60.625rem] h-[15rem] rounded-[2rem] py-[1.06rem] px-5"></textarea>
+                        <!-- subnit  -->
+                        <button
+                            class="w-full text-[1rem] bg-[#ABEF5F] font-extrabold py-3 px-5 rounded-[2rem] text-black  mt-8">Send
+                            Mail <div class="btn btn-circle btn-sm bg-black ">
+                                <i class="fa-solid fa-arrow-right text-white text-sm -rotate-45"></i>
+                            </div> </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discuss section end -->
+
+    </main>
+    <!-- main section end -->
+
+    <!-- footer section start -->
+
+    <footer class="bg-[#1C1C1C]">
+        <div class="container mx-auto py-8">
+            <div class="mx-auto">
+                <div class=" flex flex-col items-center gap-4">
+                    <a class="btn btn-ghost text-center text-[2rem] lg:text-[2rem] font-extrabold text-white" alt="">
+                        <div class="btn btn-circle btn-sm bg-lime-300">
+                            <i class="fa-solid fa-arrow-right text-xl -rotate-45"></i>
+                        </div>
+                        Rinterio
+                    </a>
+                    <p class="text-[#737373] text-[1rem] font-medium text-center lg:px-10">The barn house captivates
+                        with
+                        its
+                        blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.
+                    </p>
+                </div>
+            </div>
+            <div class=" mx-auto md:w-[43.5625rem] lg:w-[48.625rem] mt-8 md:mt-[3rem]">
+                <ul class="flex flex-col md:flex-row gap-8 md:gap-[6.25rem] lg:gap-[7.5rem] items-center">
+                    <li><a class="text-[#737373] text-[1rem] font-normal" href="">Home</a></li>
+                    <li><a class="text-[#737373] text-[1rem] font-normal" href="">Services</a></li>
+                    <li><a class="text-[#737373] text-[1rem] font-normal" href="">Portfolio</a></li>
+                    <li><a class="text-[#737373] text-[1rem] font-normal" href="">Blogs</a></li>
+                    <li><a class="text-[#737373] text-[1rem] font-normal" href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="flex justify-center rounded-2xl mx-auto mt-8 md:mt-[3rem] px-10" id="consult">
+                <button class=" bg-[#ABEF5F] rounded-[2rem] text-[#1C1C1C] text-sm font-bold px-4 py-2">Book
+                    Consult &nbsp;
+                    <div class="btn btn-circle btn-sm bg-black border-none hover:bg-black">
+                        <i class="fa-solid fa-arrow-right text-xl text-white -rotate-45"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer section end -->
 
 </body>
 
