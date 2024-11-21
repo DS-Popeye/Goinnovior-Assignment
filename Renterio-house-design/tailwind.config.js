@@ -14,11 +14,16 @@ module.exports = {
         "discuss": "url('./assets/images/bg.jpg')", // Background image URL
       },
     },
-    screens: {
-      'sm': '375px',   // Default for small (mobile)
-      'md': '834px',   // Default for medium
-      'lg': '1440px',  // Default for large
-    },
+    // screens: {
+    //   'sm': '375px',   // Default for small (mobile)
+    //   'md': '834px',   // Default for medium
+    //   'lg': '1440px',  // Default for large
+    //   'xl': '1530px',
+    //   // => @media (min-width: 1280px) { ... }
+
+    //   '2xl': '2536px',
+    //   // => @media (min-width: 1536px) { ... }
+    // },
   },
   daisyui: {
     themes: ["light", "dark", "cupcake"], // DaisyUI themes
